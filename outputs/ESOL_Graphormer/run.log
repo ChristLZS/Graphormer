@@ -265,3 +265,125 @@ The current best model is saved in: ******** outputs/ESOL_Graphormer/model.pth *
 Reload Best Model
 The current best model is saved in: ******** outputs/ESOL_Graphormer/model.pth *********
 TEST :: Test_Loss: 0.785497
++-------------------+-----------------+
+|     Parameter     |      Value      |
++===================+=================+
+| Edge dim          | 128             |
++-------------------+-----------------+
+| Epochs            | 100             |
++-------------------+-----------------+
+| Exp name          | ESOL_Graphormer |
++-------------------+-----------------+
+| Gpu index         | 0               |
++-------------------+-----------------+
+| Lr                | 0.0005          |
++-------------------+-----------------+
+| Max in degree     | 5               |
++-------------------+-----------------+
+| Max out degree    | 5               |
++-------------------+-----------------+
+| Max path distance | 5               |
++-------------------+-----------------+
+| Node dim          | 128             |
++-------------------+-----------------+
+| Num heads         | 4               |
++-------------------+-----------------+
+| Num layers        | 1               |
++-------------------+-----------------+
+| Output dim        | 1               |
++-------------------+-----------------+
+| Seed              | 16              |
++-------------------+-----------------+
+| Test batch size   | 64              |
++-------------------+-----------------+
+| Train batch size  | 64              |
++-------------------+-----------------+
+Using GPU: 0
+Graphormer(
+  (node_in_lin): Linear(in_features=9, out_features=128, bias=True)
+  (edge_in_lin): Linear(in_features=3, out_features=128, bias=True)
+  (centrality_encoding): CentralityEncoding()
+  (spatial_encoding): SpatialEncoding()
+  (layers): ModuleList(
+    (0): GraphormerEncoderLayer(
+      (attention): GraphormerMultiHeadAttention(
+        (heads): ModuleList(
+          (0-3): 4 x GraphormerAttentionHead(
+            (edge_encoding): EdgeEncoding()
+            (q): Linear(in_features=128, out_features=128, bias=True)
+            (k): Linear(in_features=128, out_features=128, bias=True)
+            (v): Linear(in_features=128, out_features=128, bias=True)
+          )
+        )
+        (linear): Linear(in_features=512, out_features=128, bias=True)
+      )
+      (ln_1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+      (ln_2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+      (ff): Linear(in_features=128, out_features=128, bias=True)
+    )
+  )
+  (node_out_lin): Linear(in_features=128, out_features=1, bias=True)
+)
+Model Parameter: 286598
+Using AdamW
++-------------------+-----------------+
+|     Parameter     |      Value      |
++===================+=================+
+| Edge dim          | 128             |
++-------------------+-----------------+
+| Epochs            | 100             |
++-------------------+-----------------+
+| Exp name          | ESOL_Graphormer |
++-------------------+-----------------+
+| Gpu index         | 0               |
++-------------------+-----------------+
+| Lr                | 0.0005          |
++-------------------+-----------------+
+| Max in degree     | 5               |
++-------------------+-----------------+
+| Max out degree    | 5               |
++-------------------+-----------------+
+| Max path distance | 5               |
++-------------------+-----------------+
+| Node dim          | 128             |
++-------------------+-----------------+
+| Num heads         | 4               |
++-------------------+-----------------+
+| Num layers        | 1               |
++-------------------+-----------------+
+| Output dim        | 1               |
++-------------------+-----------------+
+| Seed              | 16              |
++-------------------+-----------------+
+| Test batch size   | 64              |
++-------------------+-----------------+
+| Train batch size  | 64              |
++-------------------+-----------------+
+Using GPU: 0
+Graphormer(
+  (node_in_lin): Linear(in_features=9, out_features=128, bias=True)
+  (edge_in_lin): Linear(in_features=3, out_features=128, bias=True)
+  (centrality_encoding): CentralityEncoding()
+  (spatial_encoding): SpatialEncoding()
+  (layers): ModuleList(
+    (0): GraphormerEncoderLayer(
+      (attention): GraphormerMultiHeadAttention(
+        (heads): ModuleList(
+          (0-3): 4 x GraphormerAttentionHead(
+            (edge_encoding): EdgeEncoding()
+            (q): Linear(in_features=128, out_features=128, bias=True)
+            (k): Linear(in_features=128, out_features=128, bias=True)
+            (v): Linear(in_features=128, out_features=128, bias=True)
+          )
+        )
+        (linear): Linear(in_features=512, out_features=128, bias=True)
+      )
+      (ln_1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+      (ln_2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+      (ff): Linear(in_features=128, out_features=128, bias=True)
+    )
+  )
+  (node_out_lin): Linear(in_features=128, out_features=1, bias=True)
+)
+Model Parameter: 286598
+Using AdamW
